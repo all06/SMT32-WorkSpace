@@ -35,7 +35,7 @@ int main(void)
 
 	ADC_ConfigInit();
 
-	// Start ADC1 convertion
+	// Start ADC1 conversion
 	ADC_SoftwareStartConv( ADC1 );
 
     // Main loop
