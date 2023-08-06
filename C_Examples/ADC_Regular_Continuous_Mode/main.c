@@ -12,9 +12,9 @@ this algorithm uses basic ADC mode and configuration
 /* Includes */
 #include "stm32f4xx.h"
 
-const uint16_t LED1_Treshold = 3000; // ~ 2.42 V (12b->4096 = 3.3 V)
-const uint16_t LED2_Treshold = 2000; // ~ 1.61 V
-const uint16_t LED3_Treshold = 1000; // ~ 0.81 V
+const uint16_t LED1_Threshold = 3000; // ~ 2.42 V (12b->4096 = 3.3 V)
+const uint16_t LED2_Threshold = 2000; // ~ 1.61 V
+const uint16_t LED3_Threshold = 1000; // ~ 0.81 V
 
 /* Private macro */
 /* Private variables */
