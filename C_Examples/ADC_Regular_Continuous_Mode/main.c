@@ -47,21 +47,21 @@ int main(void)
 
 void LED_Control(uint16_t read)
 {
-	if(read > LED1_Treshold){
+	if(read > LED1_Threshold){
 		GPIO_SetBits( GPIOB, GPIO_Pin_7 );
 	}
 	else{
 		GPIO_ResetBits( GPIOB, GPIO_Pin_7 );
 	}
 
-	if(read > LED2_Treshold){
+	if(read > LED2_Threshold){
 		GPIO_SetBits( GPIOB, GPIO_Pin_6 );
 	}
 	else{
 		GPIO_ResetBits( GPIOB, GPIO_Pin_6 );
 	}
 
-	if(read > LED3_Treshold){
+	if(read > LED3_Threshold){
 		GPIO_SetBits( GPIOB, GPIO_Pin_3 );
 	}
 	else{
