@@ -11,7 +11,6 @@ this algorithm uses basic ADC mode and configuration
 
 /* Includes */
 #include "stm32f4xx.h"
-#include "utilities.h"
 
 const float LED1_Treshold = 3000; // ~ 2.42 V (12b->4096 = 3.3 V)
 const float LED2_Treshold = 2000; // ~ 1.61 V
