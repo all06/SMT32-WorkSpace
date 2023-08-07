@@ -11,11 +11,10 @@ this algorithm uses basic ADC mode and configuration
 
 /* Includes */
 #include "stm32f4xx.h"
-#include "utilities.h"
 
-const float LED1_Treshold = 3000; // ~ 2.42 V (12b->4096 = 3.3 V)
-const float LED2_Treshold = 2000; // ~ 1.61 V
-const float LED3_Treshold = 1000; // ~ 0.81 V
+const uint16_t LED1_Threshold = 3000; // ~ 2.42 V (12b->4096 = 3.3 V)
+const uint16_t LED2_Threshold = 2000; // ~ 1.61 V
+const uint16_t LED3_Threshold = 1000; // ~ 0.81 V
 
 /* Private macro */
 /* Private variables */
@@ -36,7 +35,7 @@ int main(void)
 
 	ADC_ConfigInit();
 
-	// Start ADC1 convertion
+	// Start ADC1 conversion
 	ADC_SoftwareStartConv( ADC1 );
 
     // Main loop
@@ -48,21 +47,21 @@ int main(void)
 
 void LED_Control(uint16_t read)
 {
-	if(read > LED1_Treshold){
+	if(read > LED1_Threshold){
 		GPIO_SetBits( GPIOB, GPIO_Pin_7 );
 	}
 	else{
 		GPIO_ResetBits( GPIOB, GPIO_Pin_7 );
 	}
 
-	if(read > LED2_Treshold){
+	if(read > LED2_Threshold){
 		GPIO_SetBits( GPIOB, GPIO_Pin_6 );
 	}
 	else{
 		GPIO_ResetBits( GPIOB, GPIO_Pin_6 );
 	}
 
-	if(read > LED3_Treshold){
+	if(read > LED3_Threshold){
 		GPIO_SetBits( GPIOB, GPIO_Pin_3 );
 	}
 	else{
