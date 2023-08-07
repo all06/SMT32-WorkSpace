@@ -39,10 +39,10 @@ int main(void)
     {
 		// On
     	GPIO_SetBits( GPIOB, GPIO_Pin_6 );
-		delay(500);
+		Delay(500);
 
 		// off
 		GPIO_ResetBits( GPIOB, GPIO_Pin_6 );
-		delay(500);
+		Delay(500);
     }
 }
